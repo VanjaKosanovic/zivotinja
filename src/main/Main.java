@@ -27,10 +27,11 @@ public class Main {
 //        garfild.animalSound();
 
 
-        ArrayList<Zivotinja> listaZivotinja = vratiListuZivotinja();
+        ArrayList<Zivotinja> x = vratiListuZivotinja();
+        vratiBrojZivotinja(x);
 //        Zivotinja [] listaZivotinja = new Zivotinja[1000];
-        System.out.println("Ime prve zivotinje u nizu je: " +listaZivotinja.get(0).getImeZivotinje());
-        System.out.println("Ime prve zivotinje u nizu je: " +listaZivotinja.get(1).getBoja());
+//        System.out.println("Ime prve zivotinje u nizu je: " +listaZivotinja.get(0).getImeZivotinje());
+//        System.out.println("Ime prve zivotinje u nizu je: " +listaZivotinja.get(1).getBoja());
 
     }
 
@@ -55,6 +56,20 @@ public class Main {
             }
         }
         return listaZivotinja;
+    }
+
+    public static void vratiBrojZivotinja(ArrayList<Zivotinja> nizZivotinja){
+        int brojPasa = 0;
+        int brojMacaka = 0;
+        for (int i = 0; i< nizZivotinja.size(); i++){
+            if (nizZivotinja.get(i) instanceof Pas) {
+                brojPasa++;
+            }else if (nizZivotinja.get(i) instanceof Macka){
+                brojMacaka ++;
+            }
+        }
+        System.out.println("Broj pasa u nizu je " + brojPasa + ".A broj macaka u nizu je " + brojMacaka);
+
     }
 
 }
