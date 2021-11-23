@@ -49,6 +49,6 @@ public  abstract class Zivotinja {
     }
 
     public void stampaj (){
-        System.out.println("Ova zivotinja je iz majke klase");
+        System.out.println("Ova zivotinja se zove " + this.imeZivotinje + ". Ova zivotinja je boje " + this.boja);
     }
 }

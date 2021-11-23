@@ -24,4 +24,10 @@ public class Pas extends Zivotinja{
     @Override
     public void animalSound() {
         System.out.println("Pas laje");    }
+
+    @Override
+    public void stampaj() {
+        super.stampaj();
+        System.out.println("Rasa psa je " + this.rasa);
+    }
 }
